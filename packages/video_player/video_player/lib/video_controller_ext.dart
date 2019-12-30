@@ -35,7 +35,7 @@ class VideoPlayerControllerExt extends VideoPlayerController {
   PlayerStateNotifier playerState = PlayerStateNotifier(PlayerState.pause);
 
   Future<void> play() async {
-    if (playerState.value == PlayerState.loop) this._unLoop();
+    if (playerState.value == PlayerState.loop) this.unLoop();
 
     ///
     await super.play();
