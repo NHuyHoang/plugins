@@ -68,8 +68,8 @@ class VideoPlayerControllerExt extends VideoPlayerController {
       seekTo(_loopRange.value.lower);
     }
   }
-
-  _unLoop() {
+  ///
+  unLoop() {
     removeListener(_setLoop);
     _loopRange.value = null;
     pause();
