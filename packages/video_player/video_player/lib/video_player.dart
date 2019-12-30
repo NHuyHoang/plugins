@@ -333,7 +333,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     if (value.isPlaying) {
       await VideoPlayerPlatform.instance.play(_textureId);
       _timer = Timer.periodic(
-        const Duration(milliseconds: 500),
+        const Duration(milliseconds: 1000 ~/ 25),
         (Timer timer) async {
           if (_isDisposed) {
             return;
