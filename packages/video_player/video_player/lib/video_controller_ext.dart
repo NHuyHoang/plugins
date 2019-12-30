@@ -50,7 +50,7 @@ class VideoPlayerControllerExt extends VideoPlayerController {
 
   /// loop extension method
   loop(Duration loopDuration, {Duration to}) {
-    Duration currentPosition = to != null ? to : value;
+    Duration currentPosition = to != null ? to : value.position;
     Duration lower = currentPosition;
     // ..durationLerp(lower: Duration.zero);
     Duration upper = (currentPosition +
